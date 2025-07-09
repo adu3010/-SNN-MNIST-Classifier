@@ -22,12 +22,12 @@ This project implements a Spiking Neural Network (SNN) using the SNNtorch framew
 
 **🚀 Quickstart**
 1. Clone the repository
-<pre>git clone https://github.com/your-username/snn-mnist-classifier.git
-cd snn-mnist-classifier<pre>
+git clone https://github.com/your-username/snn-mnist-classifier.git
+cd snn-mnist-classifier
 
 2. Install dependencies
 
-<pre>pip install snntorch torch torchvision matplotlib streamlit pyngrok pillow<pre>
+pip install snntorch torch torchvision matplotlib streamlit pyngrok pillow
     
 3. Train the SNN model
 This trains the model and saves it as snn_mnist.pth.
@@ -62,14 +62,12 @@ class SNN(nn.Module):
         return torch.stack(spk2_rec).sum(dim=0)</pre>
 
 **🖥️ Launch Streamlit Web App**
-</pre> streamlit run app.py </pre>
-
 The app allows you to upload a 28x28 grayscale image and classifies it using the trained SNN.
 
 **🌐 Public Deployment (Optional)**
 Using ngrok to expose your local Streamlit app:
 
-</pre> from pyngrok import ngrok
+from pyngrok import ngrok
 ngrok.set_auth_token("your_token")
 public_url = ngrok.connect(addr=8501)
-print(public_url) </pre>
+print(public_url) 
