@@ -1,5 +1,7 @@
 **🧠 SNN MNIST Classifier**
 
+<p align="center"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/> <img src="https://img.shields.io/badge/ngrok-1F1F1F?style=for-the-badge&logo=ngrok&logoColor=white"/> </p>
+
 This project implements a Spiking Neural Network (SNN) using the SNNtorch framework to classify handwritten digits from the MNIST dataset. The model is trained using PyTorch and deployed with a Streamlit interface for interactive digit classification.
 
 **🔥 Highlights**
@@ -16,11 +18,10 @@ Visualises training loss and accuracy
 
 **🚀 Quickstart**
 1. Clone the repository
-bash
-git clone https://github.com/your-username/snn-mnist-classifier.git
-cd snn-mnist-classifier
+<pre> git clone https://github.com/your-username/snn-mnist-classifier.git
+cd snn-mnist-classifier <pre>
 
-2. Install dependencies
+3. Install dependencies
 bash
 
 pip install snntorch torch torchvision matplotlib streamlit pyngrok pillow
