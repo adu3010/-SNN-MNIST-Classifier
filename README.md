@@ -62,13 +62,12 @@ class SNN(nn.Module):
 
 **🖥️ Launch Streamlit Web App**
 bash
-</pre>streamlit run app.py</pre>
+</pre> streamlit run app.py </pre>
 The app allows you to upload a 28x28 grayscale image and classifies it using the trained SNN.
 
 **🌐 Public Deployment (Optional)**
 Using ngrok to expose your local Streamlit app:
-</pre>
-from pyngrok import ngrok
+</pre> from pyngrok import ngrok
 ngrok.set_auth_token("your_token")
 public_url = ngrok.connect(addr=8501)
 print(public_url) </pre>
