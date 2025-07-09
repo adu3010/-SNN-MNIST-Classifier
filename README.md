@@ -32,7 +32,33 @@ python train.py
 This trains the model and saves it as snn_mnist.pth.
 
 **🧪 Model Architecture**
-<pre> ```python import torch import torch.nn as nn import snntorch as snn from snntorch import surrogate class SNN(nn.Module): def __init__(self): super().__init__() beta = 0.95 self.fc1 = nn.Linear(28*28, 1000) self.lif1 = snn.Leaky(beta=beta, spike_grad=surrogate.fast_sigmoid()) self.fc2 = nn.Linear(1000, 10) self.lif2 = snn.Leaky(beta=beta, spike_grad=surrogate.fast_sigmoid()) def forward(self, x, num_steps=25): mem1 = self.lif1.init_leaky() mem2 = self.lif2.init_leaky() spk2_rec = [] for step in range(num_steps): cur1 = self.fc1(x) spk1, mem1 = self.lif1(cur1, mem1) cur2 = self.fc2(spk1) spk2, mem2 = self.lif2(cur2, mem2) spk2_rec.append(spk2) return torch.stack(spk2_rec).sum(dim=0) ``` </pre>
+<pre> ```import torch
+import torch.nn as nn
+import snntorch as snn
+from snntorch import surrogate
+
+class SNN(nn.Module):
+    def __init__(self):
+        super().__init__()
+        beta = 0.95
+        self.fc1 = nn.Linear(28*28, 1000)
+        self.lif1 = snn.Leaky(beta=beta, spike_grad=surrogate.fast_sigmoid())
+        self.fc2 = nn.Linear(1000, 10)
+        self.lif2 = snn.Leaky(beta=beta, spike_grad=surrogate.fast_sigmoid())
+
+    def forward(self, x, num_steps=25):
+        mem1 = self.lif1.init_leaky()
+        mem2 = self.lif2.init_leaky()
+        spk2_rec = []
+
+        for step in range(num_steps):
+            cur1 = self.fc1(x)
+            spk1, mem1 = self.lif1(cur1, mem1)
+            cur2 = self.fc2(spk1)
+            spk2, mem2 = self.lif2(cur2, mem2)
+            spk2_rec.append(spk2)
+
+        return torch.stack(spk2_rec).sum(dim=0)``` </pre>
 
 **🖥️ Launch Streamlit Web App**
 bash
