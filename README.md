@@ -18,18 +18,15 @@ Visualises training loss and accuracy
 
 **🚀 Quickstart**
 1. Clone the repository
+2. 
 <pre> git clone https://github.com/your-username/snn-mnist-classifier.git
 cd snn-mnist-classifier <pre>
 
 3. Install dependencies
-bash
 
-pip install snntorch torch torchvision matplotlib streamlit pyngrok pillow
+<pre> pip install snntorch torch torchvision matplotlib streamlit pyngrok pillow <pre>
 
 3. Train the SNN model
-python
-
-python train.py
 This trains the model and saves it as snn_mnist.pth.
 
 **🧪 Model Architecture**
@@ -64,10 +61,12 @@ class SNN(nn.Module):
 **🖥️ Launch Streamlit Web App**
 bash
 </pre> streamlit run app.py </pre>
+
 The app allows you to upload a 28x28 grayscale image and classifies it using the trained SNN.
 
 **🌐 Public Deployment (Optional)**
 Using ngrok to expose your local Streamlit app:
+
 </pre> from pyngrok import ngrok
 ngrok.set_auth_token("your_token")
 public_url = ngrok.connect(addr=8501)
