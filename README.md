@@ -5,16 +5,20 @@
 This project implements a Spiking Neural Network (SNN) using the SNNtorch framework to classify handwritten digits from the MNIST dataset. The model is trained using PyTorch and deployed with a Streamlit interface for interactive digit classification.
 
 **🔥 Highlights**
-Built using SNNtorch + PyTorch
 
-Achieves ~98.5% accuracy
+-Built using SNNtorch + PyTorch
 
-Live digit classification with Streamlit
+-Achieves ~98.5% accuracy
 
-Visualises training loss and accuracy
+-Live digit classification with Streamlit
+
+-Visualises training loss and accuracy
 
 **📊 Training Results**
 ![Training Graphs](graphs.png)
+
+**Predictions**
+![Predictions](predictions.png)
 
 **🚀 Quickstart**
 1. Clone the repository
