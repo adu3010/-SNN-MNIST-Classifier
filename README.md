@@ -11,7 +11,7 @@ Live digit classification with Streamlit
 Visualises training loss and accuracy
 
 📊 Training Results
-<p align="center"> <img src="graphs.png" width="700" alt="Training Graphs"> </p>
+<p align="center"> <img src="C:\Users\User\OneDrive\Pictures\Screenshots 1" width="700" alt="Training Graphs"> </p>
 🚀 Quickstart
 1. Clone the repository
 bash
