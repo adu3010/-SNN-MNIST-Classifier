@@ -32,7 +32,7 @@ python train.py
 This trains the model and saves it as snn_mnist.pth.
 
 **🧪 Model Architecture**
-<pre> ```import torch
+<pre> import torch
 import torch.nn as nn
 import snntorch as snn
 from snntorch import surrogate
@@ -58,19 +58,17 @@ class SNN(nn.Module):
             spk2, mem2 = self.lif2(cur2, mem2)
             spk2_rec.append(spk2)
 
-        return torch.stack(spk2_rec).sum(dim=0)``` </pre>
+        return torch.stack(spk2_rec).sum(dim=0)</pre>
 
 **🖥️ Launch Streamlit Web App**
 bash
-streamlit run app.py
+</pre>streamlit run app.py</pre>
 The app allows you to upload a 28x28 grayscale image and classifies it using the trained SNN.
 
 **🌐 Public Deployment (Optional)**
 Using ngrok to expose your local Streamlit app:
-
-python
-
+</pre>
 from pyngrok import ngrok
 ngrok.set_auth_token("your_token")
 public_url = ngrok.connect(addr=8501)
-print(public_url)
+print(public_url) </pre>
