@@ -1,7 +1,8 @@
-🧠 SNN MNIST Classifier
+**🧠 SNN MNIST Classifier**
+
 This project implements a Spiking Neural Network (SNN) using the SNNtorch framework to classify handwritten digits from the MNIST dataset. The model is trained using PyTorch and deployed with a Streamlit interface for interactive digit classification.
 
-🔥 Highlights
+**🔥 Highlights**
 Built using SNNtorch + PyTorch
 
 Achieves ~98.5% accuracy
@@ -10,9 +11,10 @@ Live digit classification with Streamlit
 
 Visualises training loss and accuracy
 
-📊 Training Results
-<p align="center"> <img src="C:\Users\User\OneDrive\Pictures\Screenshots 1" width="700" alt="Training Graphs"> </p>
-🚀 Quickstart
+**📊 Training Results**
+![Training Graphs](graphs.png)
+
+**🚀 Quickstart**
 1. Clone the repository
 bash
 git clone https://github.com/your-username/snn-mnist-classifier.git
@@ -29,7 +31,7 @@ python
 python train.py
 This trains the model and saves it as snn_mnist.pth.
 
-🧪 Model Architecture
+**🧪 Model Architecture**
 python
 
 class SNN(nn.Module):
@@ -41,12 +43,12 @@ class SNN(nn.Module):
         self.fc2 = nn.Linear(1000, 10)
         self.lif2 = snn.Leaky(beta=beta, spike_grad=surrogate.fast_sigmoid())
         
-🖥️ Launch Streamlit Web App
+**🖥️ Launch Streamlit Web App**
 bash
 streamlit run app.py
 The app allows you to upload a 28x28 grayscale image and classifies it using the trained SNN.
 
-🌐 Public Deployment (Optional)
+**🌐 Public Deployment (Optional)**
 Using ngrok to expose your local Streamlit app:
 
 python
